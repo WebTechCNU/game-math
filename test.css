@@ -1,0 +1,36 @@
+.calculator {
+    display: inline-grid;
+    grid-template-columns: repeat(6, 50px);
+    gap: 10px;
+}
+
+.calculator button {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.input-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+}
+
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

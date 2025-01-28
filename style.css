@@ -1,0 +1,516 @@
+/* смуга прокручування*/
+/* ширина */
+::-webkit-scrollbar {
+    width: 15px;   
+}
+/* фон смуги */
+::-webkit-scrollbar-track {
+    background-color: #9ad9d3;
+    border-radius: 10px; /* краї смуги округлі */
+}
+/* зміна повзунка */
+::-webkit-scrollbar-thumb {
+    background-color: #54938c;
+    border-radius: 10px;
+}
+/* зміна повзунка коли на нього наводиться курсор */
+::-webkit-scrollbar-thumb:hover {
+    transition: all .3s;  /* швидкість зміни */
+    background-color: #39726d;
+}
+
+
+
+
+
+body {
+    /* display: flex; */
+    margin: 0; 
+    padding: 0;
+    font-family: Montserrat, serif; /* шрифт перший, якщо не доступний то другий */
+    font-size: 1rem; /* розмір шрифта */
+    font-weight: 400; /* товщина */
+    line-height: 1.5; /* міжрядковий інтервал */
+    width: 100%; /* від ширини вікна  */
+}
+
+
+
+
+
+
+/* навігація */
+.nav-component {
+    position: relative;  /* для позиціонування */
+    z-index: 1000; /* панель знаходиться поверх інших елементів */
+    background-color: #0d2826;
+}
+.nav-container {
+    display: flex; 
+    width: 100%;
+    max-width: 80rem; /* максимальна ширина елемента */
+    margin-right: auto; /* автоматичне вирівнювання */
+    margin-left: auto; 
+    flex-direction: row; /* внутрішні елементи розташовуються горизонтально */
+    justify-content: space-between; /* розділяє елемнти по бокам  */
+    align-items: center; /* вирівнювання по центру */
+}
+/* логотип */
+.logo-container {
+    display: flex;
+    flex-direction: row; /* елементи в ряд */
+    justify-content: center; /* вирівнюються по центру горизонтально */
+    align-items: center;  /* //-// вертикально */
+    gap: 1rem; /* проміжок між елем всередині контейнера */
+}
+/* розмір логотипа */
+.header-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+/* заголовок логотипа */
+.header-logo-title {
+    font-size: 1.5rem;
+    color: #83c5be;
+}
+.nav-list {
+    display: flex;
+    flex-direction: row; /* розташовані в ряд */
+    gap: 2rem;  
+    list-style-type: none; /* видаляє стандартні маркери списку ( точки/цифри) */
+    align-items: center; 
+    justify-content: center;
+}
+.nav-item {
+    margin: 0; /* видаляє всі відступи */
+}
+/* посилання навігацій */
+.nav-link {
+    color: #83c5be;
+    text-decoration: none; /* видаляє підкреслення */
+    font-size: 1rem; /* налаштування шрифта */
+    font-weight: 400;
+    line-height: 1.5;
+}
+.nav-link:hover {
+    color: #f5fffe;
+    transition: all .3s;
+}
+
+
+
+
+
+
+/* 1 секція */
+.section-hero {
+    /* display: flex; */
+    width: 100%;
+    background: url(images/background-hero-image.png); /* фон секції */
+}
+.hero-container {
+    max-width: 75rem; /* макс доступна ширина контейнера */
+    display: inline-flex; 
+    flex-direction: column; /* елемнти розташовані в стовпчик */
+    justify-content: center; /* вирівнювання */ 
+    align-items: center; /* вирівнювання */
+    padding-top: 5rem; /* відступи зверху і знизу */
+    padding-bottom: 4rem;
+}
+/* іконка гітхабу */
+.github-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    z-index: 1; /* рівень шару */
+}
+/* кнопка секції така сама як в хедері і інші */
+.button-nav-item {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 1.4rem 3rem;
+    background-color: #5a9792;
+    color: #ffffff ;
+    border: none;
+    box-shadow: none;
+    user-select: auto;
+    cursor: pointer;
+    border-radius: 100px;
+    z-index: 1;
+}
+/* звичайні кнопки */
+button {
+    border: none;
+    cursor: pointer;
+    background-color: #489CA6;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    line-height: 0.7;
+    border-radius: 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+    font-family: Montserrat, serif;
+    font-weight: 500;
+}
+button:before {
+    content: ""; /* порожній псевдоелемент перед контентом кнопки */
+    position: absolute; 
+    height: 100%;
+    width: 0;
+    background: #83C5BE;
+    left: 0;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.99;
+}
+button:hover:before {
+    width: 100%;
+    z-index: 0;
+}
+.subtitle-wrap {
+    background-color: #83C5BE;
+    padding: 1rem;
+    border-radius: 100px;
+    z-index: 1;
+}
+
+
+
+
+/* заголовки */
+.h1-header-style {
+    color: #98e3db;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+.h2-header-style {
+    color: #000000;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.h3-header-style {
+    color: #98e3db;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+.h1-style {
+    color: #000000;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+.h2-style {
+    color: #000000;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.h3-style {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+.h4-style {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+b {
+    z-index: 1;
+}
+.text-align-center {
+    text-align: center; /* вирівнювання тексту */
+}
+
+
+
+
+
+/* 2 секція */
+.section-article {
+    background-color: #d7fffb; /* фон 2 секції */
+}
+.article-content {
+    display: flex;
+    flex-direction: row; /* емел в ряд */
+    justify-content: center; /* вирівнювання */
+    align-items: center;
+    gap: 1rem; /* відступ між елем */
+    padding: 2rem; /* відступ всередині */
+}
+.article-container {
+    width: 50%; /* ширина контейнера */
+    display: flex; 
+    flex-direction: column; /* елем в стовпчик */
+    justify-content: flex-start; /* вирівнювання */
+    align-items: left;
+    padding: 2rem;
+}
+
+
+
+
+/* 3 секція */
+.section-games {
+    background-color: #effffd; /* фон */
+}
+.games-content {
+    display: grid; 
+    grid: auto / auto auto; /* розташування елем в 2 стовпця */
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem;
+}
+/* рамки */
+.games-item {
+    border: 2.7px solid #4ba8a0; /* обведення */
+    border-radius: 40px; /* округлість */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    text-align: center; /* вирівнювання елем у стовпчик */
+}
+/* картинки */
+.game-item-photo {
+    width: 400px;
+    border-radius: 40px;
+}
+
+
+
+
+
+
+/* 4 секція */
+.section-info {
+    background-color: #c5f2ee;
+}
+.info-content {
+    display: grid; 
+    flex-direction: column;
+    grid: auto / auto auto;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+    padding: 5rem;
+}
+.info-item {
+    background-color: #effffd;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: top;
+    padding: 4rem;
+}
+.game-content {
+    border-radius: 40px;
+    border: 2.7px solid #4ba8a0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iteractive-element{
+    display: grid; 
+    grid: auto / auto auto; /* розташування елем в 2 стовпця */
+    flex-direction: row; 
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+
+
+/* авторизація */
+.section-login {
+    background-color: #c5f2ee; /* фон */
+}
+.login-content {
+    border-radius: 40px; /* окреглення контейнера */
+    display: flex;
+    flex-direction: column; /* елем в стовпчик */
+    justify-content: center; 
+    align-items: center;
+}
+.login-form {
+    background-color: #effffd;
+    border-radius: 40px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* плавний перехід */
+    transition: transform 0.3s ease-in-out; /* збільшує форму при наведені курсору */
+}
+.login-form:hover {
+    transform: scale(1.02);
+}
+/* Стилі для заголовка */
+.login-form h2 {
+    color: #0d2826;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* Стилі для полів введення */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #83c5be;
+    border-radius: 100px;
+    outline: none; /* прибирає зовнішню рамку при фокусувані */
+    transition: all 0.3s ease-in-out; 
+}
+/* підсвічує рамку */
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #5a9792;
+    box-shadow: 0 0 10px rgba(90, 151, 146, 0.5);
+}
+/* Стилі для кнопки входу */
+.login-form button {
+    font-size: 1.3rem;
+    padding: 1.4rem 3rem;
+    background-color: #5a9792;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.login-form button:hover {
+    background-color: #39726d;
+}
+/* Анімація при натисканні на кнопку */
+.login-form button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+/* Анімація завантаження для кнопки */
+[data-loading-btn] {
+    position: relative;
+}
+[data-loading-btn]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+[data-loading-btn]:active::after {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+
+
+
+
+/* футер */
+.footer-component {
+    background-color: #0d2826; /* фон */
+}
+.footer-container-1 {
+    padding-top: 3rem; /* відступи */
+    padding-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    max-width: 80rem; /* макс доступна ширина */
+    margin-right: auto; /* центрування */
+    margin-left: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-container-2 {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    max-width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 1;
+}
+/* логотип текст */
+.footer-logo-title {
+    font-size: 1rem;
+    color: #a8dcd7;
+}
+.logo-container {
+    display: flex;
+    flex-direction: row; /* елементи в рядок */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-list {
+    display: flex;
+    flex-direction: row; 
+    gap: 2rem;
+    list-style-type: none; /* видалення стандартних маркерів списку */
+    align-items: center;
+    justify-content: flex-end;
+}
+.footer-item {
+    margin: 0;
+}
+.footer-link {
+    color: #83c5be;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.footer-link:hover {
+    color: #f5fffe;
+    transition: all .3s; /* плавний перехід */
+}

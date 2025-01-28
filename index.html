@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <!-- підключення шрифтів, сss, заголовок сторінки --> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вивчення математики для дітей</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-2.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <main class="main-content">
+            <!-- логотип + навігація + авторизація --> 
+            <header class="nav-component">
+                <div class="padding-global">
+                    <div class="nav-container">
+                        <a href="index.html" style="text-decoration: none;">
+                            <div class="logo-container">
+                                <img src="images/icon.png" alt="Іконка" class="header-logo">
+                                <p class="header-logo-title">Математика для дітей</p>
+                            </div>
+                        </a>
+                        <ul class="nav-list">
+                            <li class="nav-item"><a class="nav-link" href="addition.html">Додавання</a></li>
+                            <li class="nav-item"><a class="nav-link" href="subtraction.html">Віднімання</a></li>
+                            <li class="nav-item"><a class="nav-link" href="multiplication.html">Множення</a></li>
+                            <li class="nav-item"><a class="nav-link" href="division.html">Ділення</a></li>
+                            <button class="button-nav-item"
+                                onclick="document.location='login.html'"><b>Авторизація</b></button>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 1/4 секцій: заклик до дії + тест --> 
+            <section class="section-hero">
+                <div style="background-color: rgba(0, 41, 31, 0.65);">
+                    <div class="padding-global">
+                        <div class="hero-container">
+                            <div class="padding-medium" style="padding-right: 0rem;">
+                                <div class="spacer-medium"></div>
+                                <h1 class="h1-header-style"><b>Прокачай себе і свої здібності</b></h1>
+                                <div class="spacer-small"></div>
+                                <h3 class="h3-header-style">Приєднуйтесь до наших котячих друзів у чудовій
+                                    математичній пригоді</h3>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='test.html'"><b>Перевір
+                                        себе!</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2/4 секцій: інформаційний блок про математику --> 
+            <section class="section-article">
+                <div class="padding-global">
+                    <div class="padding-medium">
+                        <div class="article-content">
+                            <div class="article-container">
+                                <a href="https://github.com/"><button class="align-wrapper">
+                                    <img src="images/github-white-icon.webp" alt="github" class="github-icon">
+                                    <div class="subtitle-wrap">
+                                        <h2 class="h2-header-style"><b>Автор</b></h2>
+                                    </div>
+                                </button></a>
+                                <div class="spacer-medium"></div>
+                                <h1 class="h1-style"><b>Прокачай себе і свої здібності</b></h1>
+                                <div class="spacer-small"></div>
+                                <div style="display: flex; justify-content: center;">
+                                    <img src="images/cat2.png" alt="Кіт" style="width: 15rem;">
+                                </div>
+                            </div>
+                            <div class="article-container">
+                                <h3 class="h3-style">Математика — це не просто цифри; це чарівний світ! З нашими
+                                    незвичайними завданнями на тематику котів ви
+                                    розв’язуватимете рівняння швидше, ніж кіт ганятиметься за лазерною указкою.
+                                    Приготуйтеся до серйозних розваг!🐾</h3>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='test.html'"
+                                    style="width: 70%;">
+                                    <b>Загальний тест</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3/4 секцій: блок ігор на + - * / --> 
+            <section class="section-games">
+                <div class="padding-global">
+                    <div class="padding-medium">
+                        <div class="games-content">
+                            <div class="games-item">
+                                <img class="game-item-photo" src="images/game1.jpg">
+                                <div class="spacer-small"></div>
+                                <h3 class="h3-style">Додавання</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Додавати котиків – це як збільшувати кількість обіймів для всіх пухнастиків! 🐱💖</h4>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='addition.html'"
+                                    style="width: 60%;">
+                                    <b>Грати</b>
+                                </button>
+                            </div>
+                            <div class="games-item">
+                                <img class="game-item-photo" src="images/game2.jpg">
+                                <div class="spacer-small"></div>
+                                <h3 class="h3-style">Віднімання</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Віднімати – це як дарувати частину своїх цукерок друзям, щоб вони стали щасливіші!🍬🐾    </h4>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='subtraction.html'"
+                                    style="width: 60%;">
+                                    <b>Грати</b>
+                                </button>
+                            </div>
+                            <div class="games-item">
+                                <img class="game-item-photo" src="images/game3.jpg">
+                                <div class="spacer-small"></div>
+                                <h3 class="h3-style">Множення</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Множити з котиками – це як знаходити більше рибок для кожного пухнастого друга!🐱🐟</h4>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='multiplication.html'"
+                                    style="width: 60%;">
+                                    <b>Грати</b>
+                                </button>
+                            </div>
+                            <div class="games-item">
+                                <img class="game-item-photo" src="images/game4.jpg">
+                                <div class="spacer-small"></div>
+                                <h3 class="h3-style">Ділення</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Навчіться ділити смаколики між всіма пухнастиками порівну!🐱🍪</h4>
+                                <div class="spacer-medium"></div>
+                                <button class="button-nav-item" onclick="document.location='division.html'"
+                                    style="width: 60%;">
+                                    <b>Грати</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4/4 секцій: інформація про інтерактивне навчання --> 
+            <section class="section-info">
+                <div class="padding-global">
+                    <div class="padding-medium">
+                        <div class="info-content">
+                            <div class="info-item">
+                                <h3 class="h3-style">Інтерактивне навчання</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Ми — команда котів, які допомагають дітям вивчати математику. Наші
+                                    інтерактивні завдання
+                                    допоможуть вам зрозуміти математику краще!</h4>
+                            </div>
+                            <div class="info-item">
+                                <h3 class="h3-style">Математика з котиками</h3>
+                                <div class="spacer-small"></div>
+                                <h4 class="h4-style">Насолоджуйтесь чарівними картинками котів, вирішуючи математичні
+                                    задачі. Тому що хто не любить котів і математику?</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- навігація, контактна інформація, авторські права --> 
+            <footer class="footer-component">
+                <div class="padding-global">
+                    <div class="footer-container-1">
+                        <div class="logo-container">
+                            <img src="images/icon.png" alt="Іконка" class="header-logo">
+                            <p class="header-logo-title">Математика для дітей</p>
+                        </div>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a class="footer-link" href="addition.html">Додавання</a></li>
+                            <li class="footer-item"><a class="footer-link" href="subtraction.html">Віднімання</a></li>
+                            <li class="footer-item"><a class="footer-link" href="multiplication.html">Множення</a></li>
+                            <li class="footer-item"><a class="footer-link" href="division.html">Ділення</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-container-2">
+                        <div class="footer-info-1">
+                            <p class="footer-logo-title">Зв'язатися з нами: <b><a href="mailto: support@mathforkids.com" style="text-decoration: none; color: #ffffff;">support@mathforkids.com</a></b></p>
+                            <p class="footer-logo-title">Над сайтом працювала:<b> Білан Олександра</b></p>
+                        </div>
+                        <div class="footer-info-2">
+                            <p class="footer-logo-title">©2025 Вивчення математики для дітей.</p>
+                        </div>
+                    </div>
+            </footer>
+
+        </main>
+    </div>
+</body>
+
+</html>
+
+ <!-- кнопка на гіт -->
+<!-- <a href="https://github.com/"><button class="align-wrapper">
+    <img src="images/github-white-icon.webp" alt="github" class="github-icon">
+    <div class="subtitle-wrap">
+        <h2 class="h2-header-style"><b>Автор</b></h2>
+    </div>
+</button></a> --> 

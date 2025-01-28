@@ -1,0 +1,48 @@
+.padding-global {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.padding-large {
+    padding: 15rem;
+}
+
+.padding-medium {
+    padding: 4rem;
+}
+
+.padding-small {
+    padding: 2rem;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.spacer-huge {
+    height: 5rem;
+}
+
+.spacer-large {
+    height: 4rem;
+}
+
+.spacer-large {
+    height: 3rem;
+}
+
+.spacer-medium-x {
+    height: 2rem;
+}
+
+.spacer-medium {
+    height: 1.5rem;
+}
+
+.spacer-small {
+    height: 1rem;
+}
+
+.spacer-tiny {
+    height: 0.5rem;
+}
