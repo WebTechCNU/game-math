@@ -5,8 +5,8 @@
 }
 
 .calculator button {
-    padding: 15px;
-    font-size: 18px;
+    padding: 1.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -16,8 +16,8 @@
 }
 
 input {
-    padding: 10px;
-    font-size: 18px;
+    padding: 1.5rem;
+    font-size: 2.5rem;
     width: 150px;
     text-align: center;
 }
